@@ -15,3 +15,4 @@ $result=$conn->query("SELECT * FROM products");
 </tr>
 <?php endwhile; ?>
 </table>
+.
