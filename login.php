@@ -96,9 +96,25 @@ input[type="email"], input[type="password"]{ width:100%; padding:10px; margin:6p
 button{ width:100%; padding:10px; }
 .error{ color:#b00020; margin-bottom:12px; }
 .small { font-size:0.9rem; color:#555; margin-top:10px;}
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+}
+body {
+  background-image: url('images/bake1.jpg');
+}
 </style>
+ 
+
 </head>
 <body>
+   <div class="header">
+  <h1>Twenty Eight Bakery</h1>
+  
+</div>
 <div class="container">
   <h2>Sign in</h2>
 
