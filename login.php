@@ -89,22 +89,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sign in</title>
 <style>
-/* Minimal inline styles — replace with your css file */
-body { font-family: Arial, sans-serif; background:#f7f7f7; padding:30px; }
+
+body { font-family: BrushScriptMT, sans-serif; background:#f7f7f7; padding:30px; }
 .container { max-width:420px; margin:0 auto; background:white; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
 input[type="email"], input[type="password"]{ width:100%; padding:10px; margin:6px 0 12px; box-sizing:border-box;}
 button{ width:100%; padding:10px; }
 .error{ color:#b00020; margin-bottom:12px; }
 .small { font-size:0.9rem; color:#555; margin-top:10px;}
 .header {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
-  background: #1abc9c;
-  color: white;
+   background-image: url('images/back4.jpg');
+     background-size: 100% 100%;
+  color: black;
   font-size: 20px;
 }
 body {
-  background-image: url('images/bake1.jpg');
+  background-image: url('images/back2.jpg');
 }
 </style>
  
@@ -112,11 +113,23 @@ body {
 </head>
 <body>
    <div class="header">
-  <h1>Twenty Eight Bakery</h1>
+  <h1 align=center>
+        <img src="images/lastlogo.jpg" alt="Sorry its coming..." height="450" width="500">
+    </h1>
   
 </div>
 <div class="container">
-  <h2>Sign in</h2>
+    <h2> 
+        <nav align=center>
+            <div>
+            <a href="dashboard.php">Home</a>|
+            <a href="product.php">product</a> |
+            <a href="contactus.php">Contact Us</a> |
+            <a href="aboutus.php">About Us</a> |
+            <a href="login.php">Login</a></div>
+        </nav>
+    </h2>
+  <h3>Sign in</h3>
 
   <?php if ($error): ?>
     <div class="error"><?=htmlspecialchars($error)?></div>
