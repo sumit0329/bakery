@@ -4,37 +4,53 @@
 <head>
     <title>Twenty 8 Bakery </title>
     <style>
+        .header {
+  padding: 20px;
+  text-align: center;
+   background-image: url('images/back4.jpg');
+     background-size: 40% 100%;
+  color: black;
+  font-size: 20px;
+}
         body {
             background-image: url('images/back2.jpg');
         }
 
-        h2 {
-            background-color: #d4af37;
-            animation-name: example2;
-  animation-duration: 3s;
-  animation-iteration-count: 20;
-        }
+        
 
         a:link {
             color: black;
             background-color: transparent;
             text-decoration: none;
         }
-div.gallery {
-  border: 1px solid #ccc;
-  background-color: #d4af37;
+.nav {
+  background-color: salmon;
+  overflow: hidden;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+/* For styling the links inside the navigation bar */
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-div.gallery img {
-  width: 100%;
-  height: 50%;
+/* For Changing the color of links on hover */
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-div.desc {
+/* For adding a color to the active/current link */
+.nav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+nav.desc {
   padding: 5px;
   text-align: center;
 }
@@ -109,46 +125,44 @@ h3{
 </head>
 
 <body>
-  <h1 align=center>
-    <img src="rlogo.png" alt="Sorry its coming..." height="250" width="500">
+    <div class = "header">
+         <h1 align=center>
+    <img src="images/lastlogo.jpg" alt="Sorry its coming..." height="250" width="500">
 </h1>
-<h2>
-    <nav align=center>
-        <div>
+    </div>
+ 
+<div class ="nav"> 
+ <h2> 
+        <nav align=center>
+            <div>
             <a href="dashboard.php">Home</a>|
-            <a href="product.php">product</a> |
+            <a href="view_product.php">product</a> |
             <a href="contactus.php">Contact Us</a> |
             <a href="aboutus.php">About Us</a> |
             <a href="login.php">Login</a>
-            
-        </div>
-    </nav>
-</h2><h3 align="center"><b>BARBER</b></h3>
-    <div class="polaroid" align="center">
-        <img src="pic/Demo.jpg" alt="5 Terre" style="width:100%">
-        <div class="container">
-       
-        </div>
-      </div>
-      <h4 align="center">Products</h4>
+        </nav>
+    </h2>
+</div>
+
+      <h4 align="center">Our Products</h4>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/trim.jpg">
-            <img src="pic/trim.jpg" alt="Comming" width="600" height="400">
+          <a target="_blank" href="images/pro1.jpg">
+            <img src="images/pro1.jpg" alt="Comming" width="600" height="400">
           </a>
-          <div class="desc"><b> Havels</b></div>
-          <div class="desc"><b>$59.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b> High Fibre White Loaf Bread</b></div>
+          <div class="desc"><b>$5.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/trim2.jpeg">
-            <img src="pic/trim2.jpeg" alt="coming" width="600" height="400">
+          <a target="_blank" href="images/pro2.jpg">
+            <img src="images/pro2.jpg" alt="coming" width="600" height="400">
           </a>
-          <div class="desc"><b>Deluxe Trimmer</b></div>
-          <div class="desc"><b>$39.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>White Block Loaf Bread</b></div>
+          <div class="desc"><b>$3.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       
