@@ -149,7 +149,7 @@ body {
         <nav align=center>
             <div>
             <a href="dashboard.php">Home</a>|
-            <a href="product.php">product</a> |
+            <a href="view_product.php">product</a> |
             <a href="contactus.php">Contact Us</a> |
             <a href="aboutus.php">About Us</a> |
             <a href="login.php">Login</a>
