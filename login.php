@@ -100,12 +100,38 @@ button{ width:100%; padding:10px; }
   padding: 20px;
   text-align: center;
    background-image: url('images/back4.jpg');
-     background-size: 100% 100%;
+     background-size: 40% 100%;
   color: black;
   font-size: 20px;
 }
 body {
   background-image: url('images/back2.jpg');
+}
+.nav {
+  background-color: salmon;
+  overflow: hidden;
+}
+
+/* For styling the links inside the navigation bar */
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* For Changing the color of links on hover */
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* For adding a color to the active/current link */
+.nav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 </style>
  
@@ -114,12 +140,12 @@ body {
 <body>
    <div class="header">
   <h1 align=center>
-        <img src="images/lastlogo.jpg" alt="Sorry its coming..." height="450" width="500">
+        <img src="images/lastlogo.jpg" alt="Sorry its coming..." height="200" width="400">
     </h1>
   
 </div>
-<div class="container">
-    <h2> 
+<div class ="nav"> 
+ <h2> 
         <nav align=center>
             <div>
             <a href="dashboard.php">Home</a>|
@@ -129,6 +155,10 @@ body {
             <a href="login.php">Login</a></div>
         </nav>
     </h2>
+</div>
+<div class="container">
+   
+    
   <h3>Sign in</h3>
 
   <?php if ($error): ?>
