@@ -62,7 +62,7 @@ nav.desc {
 .responsive {
   padding: 0 6px;
   float: left;
-  width: 24.99999%;
+  
 }
 
 @media only screen and (max-width: 700px) {
@@ -73,8 +73,10 @@ nav.desc {
 }
 
 @media only screen and (max-width: 500px) {
+    
   .responsive {
-    width: 10%;
+    width: 5%;
+    object-fit: fill;
   }
 }
 
@@ -168,96 +170,96 @@ h3{
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/trim3.jpg">
-            <img src="pic/trim3.jpg" alt="Northern Lights" width="600" height="400">
+          <a target="_blank" href="images/pro3.jpg">
+            <img src="images/pro3.jpg" alt="Round White Roll " width="600" height="400">
           </a>
-          <div class="desc"><b>RTR Trimmer</b></div>
-          <div class="desc"><b>$129.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Round White Roll</b></div>
+          <div class="desc"><b>$1.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/trim4.png">
-            <img src="pic/trim4.png" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro4.jpg">
+            <img src="images/pro4.jpg" alt="White Vienna" width="600" height="400">
           </a>
-          <div class="desc"><b>GXT Trimmer</b></div>
-          <div class="desc"><b>$139.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>White Vienna </b></div>
+          <div class="desc"><b>$4.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
      
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/sc1.webp">
-            <img src="pic/sc1.webp" alt="Northern Lights" width="600" height="400">
+          <a target="_blank" href="images/pro5.jpg">
+            <img src="images/pro5.jpg" alt="Traditional Hot Cross Bun 6 Pack" width="600" height="400">
           </a>
-          <div class="desc"><b>SG Scissors</b></div>
-          <div class="desc"><b>$29.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Traditional Hot Cross Bun 6 Pack</b></div>
+          <div class="desc"><b>$6.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/sc2.jpg">
-            <img src="pic/sc2.jpg" alt="Mountains" width="500" height="300">
-          </a>
-          <div class="desc"><b>GXT goldd</b></div>
-          <div class="desc"><b>$139.95</b></div> <div class="desc"><button>BUY</button></div>
+          <a target="_blank" href="images/pro6.jpg">
+            <img src="images/pro6.jpg" alt="Mocha Hot Cross Bun" width="500" height="300">
+          </a>er
+          <div class="desc"><b>Mocha Hot Cross Bun</b></div>
+          <div class="desc"><b>$3.5</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/shave1.jpg">
-            <img src="pic/shave1.jpg" alt="Northern Lights" width="600" height="400">
+          <a target="_blank" href="images/pro7.jpg">
+            <img src="images/pro7.jpg" alt="Lemon Tart 6 Pack" width="600" height="400">
           </a>
-          <div class="desc"><b>Rachu</b></div>
-          <div class="desc"><b>$129.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Lemon Tart 6 Pack</b></div>
+          <div class="desc"><b>$8.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/shave2.webp">
-            <img src="pic/shave2.webp" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro8.jpg">
+            <img src="images/pro8.jpg" alt="Large Traditional Christmas Cake" width="600" height="400">
           </a>
-          <div class="desc"><b>G-Shaver</b></div>
-          <div class="desc"><b>$109.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Large Traditional Christmas Cake</b></div>
+          <div class="desc"><b>$10.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/shave3.jpeg">
-            <img src="pic/shave3.jpeg" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro9.jpg">
+            <img src="images/pro9.jpg" alt="Ham & Cheese Danish" width="600" height="400">
           </a>
-          <div class="desc"><b>G3-Shaver</b></div>
-          <div class="desc"><b>$139.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Ham & Cheese Danish</b></div>
+          <div class="desc"><b>$3.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/clip1.jpg">
-            <img src="pic/clip1.jpg" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro10.jpg">
+            <img src="images/pro10.jpg" alt="Croissant" width="600" height="400">
           </a>
-          <div class="desc"><b>B-Clipper</b></div>
-          <div class="desc"><b>$139.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Croissant</b></div>
+          <div class="desc"><b>$3.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/clip2.jpg">
-            <img src="pic/clip2.jpg" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro11.jpg">
+            <img src="images/pro11.jpg" alt="Cheese & Bacon Roll" width="600" height="400">
           </a>
-          <div class="desc"><b>GXT ck</b></div>
-          <div class="desc"><b>$139.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Cheese & Bacon Roll</b></div>
+          <div class="desc"><b>$3.5</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/clip3.webp">
-            <img src="pic/clip3.webp" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro12.jpg">
+            <img src="images/pro12.jpg" alt="Italian Roll" width="600" height="400">
           </a>
-          <div class="desc"><b>ck</b></div>
-          <div class="desc"><b>$166.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Italian Roll</b></div>
+          <div class="desc"><b>$4.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
