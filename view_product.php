@@ -282,49 +282,24 @@ h3{
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/wahl.png">
-            <img src="pic/wahl.png" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro15.jpg">
+            <img src="images/pro15.jpg" alt="Scones 6 Pack" width="600" height="400">
           </a>
-          <div class="desc"><b>Wahl</b></div>
-          <div class="desc"><b>$39.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Scones 6 Pack</b></div>
+          <div class="desc"><b>$8.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/wahl1.jpg">
-            <img src="pic/wahl1.jpg" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro16.jpg">
+            <img src="images/pro16.jpg" alt="Pizza 2 Pack" width="600" height="400">
           </a>
-          <div class="desc"><b>wahl M</b></div>
-          <div class="desc"><b>$29.95</b></div> <div class="desc"><button>BUY</button></div>
-        </div>
-      </div>
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="pic/mega1.webp">
-            <img src="pic/mega1.webp" alt="Mountains" width="600" height="400">
-          </a>
-          <div class="desc"><b>M-Dryer</b></div>
-          <div class="desc"><b>$39.95</b></div> <div class="desc"><button>BUY</button></div>
-        </div>
-      </div>
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="pic/hr2.jpeg">
-            <img src="pic/hr2.jpeg" alt="Mountains" width="600" height="400">
-          </a>
-          <div class="desc"><b>Hair Spray</b></div>
+          <div class="desc"><b>Pizza 2 Pack</b></div>
           <div class="desc"><b>$9.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="pic/hr.jpeg">
-            <img src="pic/hr.jpeg" alt="Mountains" width="600" height="400">
-          </a>
-          <div class="desc"><b>HR SP</b></div>
-          <div class="desc"><b>$11.95</b></div> <div class="desc"><button>BUY</button></div>
-        </div>
-      </div>
+     
+      
       
       <div class="clearfix"></div>
       
