@@ -264,20 +264,20 @@ h3{
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/clip4.jpg">
-            <img src="pic/clip4.jpg" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro13.jpg">
+            <img src="images/pro13.jpg" alt="Croissant 4 Pack" width="600" height="400">
           </a>
-          <div class="desc"><b>MK-AURTHER</b></div>
-          <div class="desc"><b>$229.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Croissant 4 Pack</b></div>
+          <div class="desc"><b>$12.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pic/clip5.webp">
-            <img src="pic/clip5.webp" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="images/pro14.jpg">
+            <img src="images/pro14.jpg" alt="Savoury Bite 3 Pack" width="600" height="400">
           </a>
-          <div class="desc"><b>SlS M</b></div>
-          <div class="desc"><b>$339.95</b></div> <div class="desc"><button>BUY</button></div>
+          <div class="desc"><b>Savoury Bite 3 Pack</b></div>
+          <div class="desc"><b>$9.95</b></div> <div class="desc"><button>BUY</button></div>
         </div>
       </div>
       <div class="responsive">
