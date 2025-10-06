@@ -18,3 +18,20 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <input type="number" name="stock" placeholder="Stock Quantity" required><br>
 <button type="submit">Add Product</button>
 </form>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bakery Products</title>
+</head>
+<body>
+  <h2>Chocolate Cake</h2>
+  <p>Price: $15</p>
+  <form action="view_order.php" method="POST">
+    <input type="hidden" name="product_id" value="1">
+    <input type="hidden" name="quantity" value="1">
+    <button type="submit">Buy</button>
+  </form>
+</body>
+</html>
