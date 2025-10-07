@@ -239,14 +239,14 @@
                 <img src="images/tshewang.jpg" alt="Pastry Chef">
                 <h3>Tshewang</h3>
                 <p><strong>Pastry Chef</strong></p>
-                <p>Michael brings artistry to our pastries, crafting delicate desserts that blend flavor and presentation perfectly for every occasion.</p>
+                <p>Tshewang brings artistry to our pastries, crafting delicate desserts that blend flavor and presentation perfectly for every occasion.</p>
             </div>
 
             <div class="team-member">
                 <img src="images/saugat.jpg" alt="Customer Service Manager">
                 <h3>Saugat</h3>
                 <p><strong>Customer Service Manager</strong></p>
-                <p>Emily ensures every guest feels welcome and valued, providing a warm smile and excellent service that make each visit memorable.</p>
+                <p>Saugat ensures every guest feels welcome and valued, providing a warm smile and excellent service that make each visit memorable.</p>
             </div>
         </div>
     </section>
