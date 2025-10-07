@@ -202,17 +202,7 @@
         <img src="rlogo.png" alt="Sorry its coming..." height="250" width="500">
     </h1>
     <h2>
-        <nav align=center>
-            <div>
-                <a href="barber.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-                    href="product.html">Products</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-                    href="service.html">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-                    href="contact.html">Contact</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;<a href="aboutus.html">About us</a>
-               
-                &nbsp;&nbsp;&nbsp;&nbsp;<a href="appointment.html">Appointment</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;<a href="signup.html">Sign up</a>
-            </div>
+     
         </nav>
     </h2>
     <h3>
