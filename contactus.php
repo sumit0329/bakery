@@ -141,3 +141,41 @@
     </p>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us | Twenty 8 Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Contact Us</h1>
+</div>
+
+<div class="contact-section">
+    <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p><strong>Phone:</strong> +61 2 4567 8910</p>
+        <p><strong>Email:</strong> info@twenty8bakery.com</p>
+        <p><strong>Address:</strong> 28 Bread Street, Sydney, NSW, Australia</p>
+        <p><strong>Opening Hours:</strong><br>
+           Monday - Friday: 7:00 AM – 6:00 PM<br>
+           Saturday - Sunday: 8:00 AM – 4:00 PM</p>
+    </div>
+
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps?q=Sydney%20NSW%20Australia&output=embed"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Twenty 8 Bakery | Visit us today!</p>
+</footer>
+
+</body>
+</html>
