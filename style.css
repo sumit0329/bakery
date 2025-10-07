@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #fff5ef;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #f47c6a;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+/* About Us */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    background-color: #fff;
+}
+.about-img {
+    width: 400px;
+    border-radius: 15px;
+    margin: 20px;
+}
+.about-text {
+    max-width: 600px;
+    margin: 20px;
+}
+.about-text h2 {
+    color: #c44d2d;
+    margin-bottom: 15px;
+}
+.about-text p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* Contact Us */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #fff;
+}
+.contact-info {
+    max-width: 500px;
+    margin: 20px;
+}
+.contact-info h2 {
+    color: #c44d2d;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.map {
+    width: 500px;
+    margin: 20px;
+    border: 3px solid #f47c6a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+}
