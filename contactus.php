@@ -142,40 +142,113 @@
 </body>
 </html>
 
-<!DOCTYPE html>
 <html>
+
 <head>
-    <title>Contact Us | Twenty 8 Bakery</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bala Hairscuts</title>
+    <style>
+        body {
+            background-image: url('pic/last.jpg');
+        }
+
+        h2 {
+            background-color: #d4af37;
+        }
+
+        a:link {
+            color: rgb(251, 251, 251);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        h4 {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 20px;
+            color: #ffffff;
+        }
+        h5 {
+            font-size: 20px;
+            color: #ffffff  ;
+
+        }
+        .contact {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: center;
+            color: aliceblue;
+        }
+        .cat{
+    display: flex;
+    gap:50px;
+    grid-template-columns:auto auto;
+    color: #ffffff;
+    padding: 30px 20px;
+    /* grid-column-gap: 20px; */
+    /* grid-row-gap:30px; */
+
+}
+.cat1{
+    border: 1px ;
+    padding: 20px;
+    font-size:30;
+    text-align:center;
+    color: #ffffff;
+    }
+    </style>
+
+    
 </head>
+
 <body>
-
-<div class="header">
-    <h1>Contact Us</h1>
-</div>
-
-<div class="contact-section">
-    <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p><strong>Phone:</strong> +61 2 4567 8910</p>
-        <p><strong>Email:</strong> info@twenty8bakery.com</p>
-        <p><strong>Address:</strong> 28 Bread Street, Sydney, NSW, Australia</p>
-        <p><strong>Opening Hours:</strong><br>
-           Monday - Friday: 7:00 AM – 6:00 PM<br>
-           Saturday - Sunday: 8:00 AM – 4:00 PM</p>
-    </div>
-
-    <div class="map">
-        <iframe 
-            src="https://www.google.com/maps?q=Sydney%20NSW%20Australia&output=embed"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2025 Twenty 8 Bakery | Visit us today!</p>
-</footer>
-
+    <h1 align=center>
+        <img src="rlogo.png" alt="Sorry its coming..." height="250" width="500">
+    </h1>
+    <h2>
+        <nav align=center>
+            <div>
+                <a href="barber.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="product.html">Products</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="service.html">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="contact.html">Contact</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="aboutus.html">About us</a>
+               
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="appointment.html">Appointment</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="signup.html">Sign up</a>
+            </div>
+        </nav>
+    </h2>
+    <h3>
+        <table border=2 width=350 height=400>
+            <img src="C:\Users\61406\Desktop\Barber\back.jpg" alt="its coming..." width=350 height=400>
+        </table>
+        <h4><b>Opening Hours</b>
+            
+        <ul>
+            <li>Sunday(10am-7pm)</li><li>Monday(10am-7pm)</li><li>Tuesday(10am-7pm)</li><li>Wednesday(10am-7pm)</li><li>Thursday(10am-7pm)</li><li>Friday(10am-7pm)</li><li>Saturday(10am-7pm)</li>
+        </ul><a href="C:\Users\61406\Desktop\Barber\appointment.html"><button >Appointment</button></a></h4>
+    </h3>
+    <h5 align="center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.113883332578!2d149.12589084079704!3d-35.278294693551196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b164d680b663907%3A0x95a50cffbec97392!2sAlinga%20St%2C%20Canberra%20ACT%202601!5e0!3m2!1sen!2sau!4v1696327670754!5m2!1sen!2sau" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<br><br><b>  <u>Our Location</u></b>
+<ul>
+    <li>Contact = 047800000</li>
+    <l1>Address = Alinga street</l1>
+    <li>Email = <a  href="twenty8@email.com">Bala.haircuts@email.com</a></li>
+    
+</ul>
+<br><br>
+<b>!!!THANKYOU!!!</b>
+</h5>
+    
 </body>
+
 </html>
