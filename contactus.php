@@ -114,26 +114,6 @@
             text-align: center;
             margin: 4px 0;
         }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1 align="center">
-            <img src="images/lastlogo.jpg" alt="Sorry its coming..." height="250" width="500">
-        </h1>
-    </div>
-
-    <div class="nav">
-        <h2>
-            <nav align="center">
-                <a href="dashboard.php">Home</a> |
-                <a href="view_product.php">Product</a> |
-                <a href="contactus.php">Contact Us</a> |
-                <a href="aboutus.php">About Us</a> |
-                <a href="login.php">Login</a>
-            </nav>
-        </h2>
-    </div>
 
 
     <p align="center">
