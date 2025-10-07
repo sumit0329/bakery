@@ -230,21 +230,21 @@
         <div class="team-container">
             <div class="team-member">
                 <img src="images/team1.jpg" alt="Head Baker">
-                <h3>Sarah Thompson</h3>
+                <h3>Sumit</h3>
                 <p><strong>Head Baker</strong></p>
                 <p>With over 10 years of baking experience, Sarah leads our kitchen with creativity and precision, ensuring every loaf and pastry meets the highest standard.</p>
             </div>
 
             <div class="team-member">
                 <img src="images/team2.jpg" alt="Pastry Chef">
-                <h3>Michael Lee</h3>
+                <h3>Tshewang</h3>
                 <p><strong>Pastry Chef</strong></p>
                 <p>Michael brings artistry to our pastries, crafting delicate desserts that blend flavor and presentation perfectly for every occasion.</p>
             </div>
 
             <div class="team-member">
                 <img src="images/team3.jpg" alt="Customer Service Manager">
-                <h3>Emily Davis</h3>
+                <h3>Saugat</h3>
                 <p><strong>Customer Service Manager</strong></p>
                 <p>Emily ensures every guest feels welcome and valued, providing a warm smile and excellent service that make each visit memorable.</p>
             </div>
