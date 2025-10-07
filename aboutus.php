@@ -173,3 +173,170 @@
 
 </body>
 </html>
+
+Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+1 of 2,872
+Fwd:
+Inbox
+
+Sumit Shrestha <stha.sls08@gmail.com>
+Attachments
+23:00 (40 minutes ago)
+to me
+
+
+
+---------- Forwarded message ---------
+From: Sumit Shrestha <stha.sls08@gmail.com>
+Date: Sun, 28 Sep 2025 at 11:37 pm
+Subject:
+To: <Saugatsapkota463@gmail.com>
+
+
+
+ 18 attachments
+  • Scanned by Gmail
+<html>
+
+<head>
+    <title>Bala Hairscuts</title>
+    <style>
+        body {
+            background-image: url('pic/last.jpg');
+        }
+
+        h2 {
+            background-color: #d4af37;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .container {
+  position: relative;
+  width: 30%;
+  top: -67%;
+  left: 35%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+  top: 80%;
+  left: 50%;
+}
+
+.container:hover .middle {
+  opacity: 1;
+  top: 80%;
+  left: 50%;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+       
+        .hero-image {
+  background: url(haircut.webp) no-repeat center; 
+  background-size: cover;
+ background-position:center;
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  position: absolute;
+            top: 150%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+  
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;}
+  h5 {
+            position: absolute;
+            top: -110%;
+            left: 190%;
+            transform: translate(-50%, -50%);}
+    </style>
+</head>
+
+<body>
+  <h1 align=center>
+    <img src="rlogo.png" alt="Sorry its coming..." height="250" width="500">
+</h1>
+<h2>
+    <nav align=center>
+        <div>
+            <a href="barber.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="product.html">Products</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="service.html">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="contact.html">Contact</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="aboutus.html">About us</a>
+           
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="appointment.html">Appointment</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="signup.html">Sign up</a>
+        </div>
+    </nav>
+</h2>
+    
+    <h3>
+        <table border=2 width=350 height=400>
+            <img src="back.jpg" alt="its coming..." width=350 height=400>
+        </table>
+        
+    </h3>
+    <div class="container">
+        <img src="pic/mine.jpg" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">Sumit</div>
+        </div>
+      </div>
+      <h4> 
+        <div class="hero-image" align="center">
+            <div class="hero-text">
+              <h1 style="font-size:30px">Bala?</h1>
+              <h3>Bala means good in newari language of newars which is one of the caste from Nepal. As a barber I want to give good services
+                to the peoples make them looks good. Do haircuts as they desired.he objective of a barber is to ensure the client is 
+                satisfied with the services performed,
+                 as the ultimate goal is to build a clientele of repeat customers, as well as new customers through customer referrals.
+              </h3>
+              <h5> <img src="gif/giphy.gif" alt="its coming..." width=350 height=400></h5>
+            </div>
+          </div>
+      </h4>
+</body>
+
+</html>
+aboutus.html
+Displaying aboutus.html.
