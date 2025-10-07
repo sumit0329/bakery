@@ -141,3 +141,35 @@
     </p>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us | Twenty 8 Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>About Us</h1>
+</div>
+
+<div class="about-section">
+    <img src="images/bakery_team.jpg" alt="Bakery Team" class="about-img">
+    <div class="about-text">
+        <h2>Welcome to Twenty 8 Bakery</h2>
+        <p>Established in 2025, Twenty 8 Bakery is dedicated to crafting the finest breads, pastries, and desserts using
+        locally sourced ingredients. We believe in blending traditional baking techniques with modern flavors to create
+        delightful treats for everyone.</p>
+        <p>Our skilled bakers start early each morning to ensure every loaf and pastry is baked to perfection.
+        Whether you're after a crispy croissant, a hearty sourdough, or a special cake for your celebration, Twenty 8 Bakery has it all!</p>
+        <p>We are passionate about quality, freshness, and community. Thank you for being part of our journey.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Twenty 8 Bakery | Baked with ❤️ every day</p>
+</footer>
+
+</body>
+</html>
