@@ -1,5 +1,5 @@
 <?php
-// About Us page for Twenty 8 Bakery
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -211,7 +211,7 @@
     </div>
 
     <section class="about-section">
-        <img src="images/bakery_team.jpg" alt="Our Bakery Team" class="about-img">
+        <img src="images/shop.jpg" alt="Our Bakery Team" class="about-img">
 
         <div class="about-text">
             <h2>Welcome to Twenty 8 Bakery</h2>
@@ -225,25 +225,25 @@
 
     <section class="team-section">
         <h2>Meet Our Team</h2>
-        <img src="images/group_photo.jpg" alt="Twenty 8 Bakery Team" class="team-group">
+        <img src="images/team.jpg" alt="Twenty 8 Bakery Team" class="team-group">
 
         <div class="team-container">
             <div class="team-member">
-                <img src="images/team1.jpg" alt="Head Baker">
+                <img src="images/sumit.jpg" alt="Head Baker">
                 <h3>Sumit</h3>
                 <p><strong>Head Baker</strong></p>
                 <p>With over 10 years of baking experience, Sarah leads our kitchen with creativity and precision, ensuring every loaf and pastry meets the highest standard.</p>
             </div>
 
             <div class="team-member">
-                <img src="images/team2.jpg" alt="Pastry Chef">
+                <img src="images/tshewang.jpg" alt="Pastry Chef">
                 <h3>Tshewang</h3>
                 <p><strong>Pastry Chef</strong></p>
                 <p>Michael brings artistry to our pastries, crafting delicate desserts that blend flavor and presentation perfectly for every occasion.</p>
             </div>
 
             <div class="team-member">
-                <img src="images/team3.jpg" alt="Customer Service Manager">
+                <img src="images/saugat.jpg" alt="Customer Service Manager">
                 <h3>Saugat</h3>
                 <p><strong>Customer Service Manager</strong></p>
                 <p>Emily ensures every guest feels welcome and valued, providing a warm smile and excellent service that make each visit memorable.</p>

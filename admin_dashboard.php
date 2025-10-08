@@ -6,6 +6,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-image: url('images/back2.jpg');
         }
         h1 {
             background-color: #007BFF;
@@ -32,13 +33,14 @@
     </style>
 </head>
 <body>
-    <h1>Hi Admin</h1>
+    <h1> Twenty'8 Bakery</h1>
     <h2>Dashboard</h2>
 
     <div class="menu">
         <a href="orders.php">Manage Orders</a>
         <a href="users.php">Manage Users</a>
         <a href="attendance.php">Manage Attendance</a>
+        <a href="login.php">logout</a>
     </div>
 </body>
 </html>
