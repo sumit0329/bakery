@@ -1,4 +1,20 @@
 <?php
+include "db.php"; // Make sure this file defines $mysqli
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
+    $product_id = intval($_POST["product_id"]);
+    $quantity = intval($_POST["quantity"]);
+    $price = floatval($_POST["price"]);
+    $order_id = rand(1000, 9999); // Temporary order_id (replace with actual order system later)
+
+    // Insert into database
+    $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("iiid", $order_id, $product_id, $quantity, $price);
+    $stmt->execute();
+    $stmt->close();
+
+    echo "<script>alert('✅ Order placed successfully!');</script>";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +38,7 @@
             font-size: 20px;
         }
 
-         .nav {
+        .nav {
             background-color: salmon;
             overflow: hidden;
             text-align: center;
@@ -55,7 +71,6 @@
             margin-top: 20px;
         }
 
-        
         .product-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -122,165 +137,130 @@
 
     <div class="nav">
         <a href="dashboard.php">Home</a>
-        <a href="view_product.php"class="active">Product</a>
+        <a href="view_product.php" class="active">Product</a>
         <a href="contactus.php">Contact Us</a>
         <a href="aboutus.php">About Us</a>
         <a href="login.php">Login</a>
-            </nav>
-        </h2>
     </div>
 
     <h4>Our Products</h4>
 
-    
     <div class="product-container">
-
         <div class="gallery">
-            <a target="_blank" href="images/pro1.jpg">
-                <img src="images/pro1.jpg" alt="High Fibre White Loaf Bread">
-            </a>
+            <img src="images/pro1.jpg" alt="High Fibre White Loaf Bread">
             <div class="desc"><b>High Fibre White Loaf Bread</b></div>
             <div class="desc"><b>$5.95</b></div>
-            <div class="desc"><button>BUY</button></div>
+            <div class="desc"><button onclick="buyProduct(1, 5.95)">BUY</button></div>
         </div>
 
         <div class="gallery">
-            <a target="_blank" href="images/pro2.jpg">
-                <img src="images/pro2.jpg" alt="White Block Loaf Bread">
-            </a>
+            <img src="images/pro2.jpg" alt="White Block Loaf Bread">
             <div class="desc"><b>White Block Loaf Bread</b></div>
             <div class="desc"><b>$3.95</b></div>
-            <div class="desc"><button>BUY</button></div>
+            <div class="desc"><button onclick="buyProduct(2, 3.95)">BUY</button></div>
         </div>
 
         <div class="gallery">
-            <a target="_blank" href="images/pro3.jpg">
-                <img src="images/pro3.jpg" alt="Round White Roll">
-            </a>
+            <img src="images/pro3.jpg" alt="Round White Roll">
             <div class="desc"><b>Round White Roll</b></div>
             <div class="desc"><b>$1.95</b></div>
-            <div class="desc"><button>BUY</button></div>
+            <div class="desc"><button onclick="buyProduct(3, 1.95)">BUY</button></div>
         </div>
-
         <div class="gallery">
-            <a target="_blank" href="images/pro4.jpg">
-                <img src="images/pro4.jpg" alt="White Vienna">
-            </a>
-            <div class="desc"><b>White Vienna</b></div>
-            <div class="desc"><b>$4.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
+            <img src="images/pro4.jpg" alt="Wholemeal Bread">
+            <div class="desc"><b>Wholemeal Bread</b></div>
+            <div class="desc"><b>$4.50</b></div>
+            <div class="desc"><button onclick="buyProduct(4, 4.50)">BUY</button></div>
+            
 
+        </div>  
         <div class="gallery">
-            <a target="_blank" href="images/pro5.jpg">
-                <img src="images/pro5.jpg" alt="Traditional Hot Cross Bun 6 Pack">
-            </a>
-            <div class="desc"><b>Traditional Hot Cross Bun 6 Pack</b></div>
-            <div class="desc"><b>$6.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro6.jpg">
-                <img src="images/pro6.jpg" alt="Mocha Hot Cross Bun">
-            </a>
-            <div class="desc"><b>Mocha Hot Cross Bun</b></div>
-            <div class="desc"><b>$3.50</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro7.jpg">
-                <img src="images/pro7.jpg" alt="Lemon Tart 6 Pack">
-            </a>
-            <div class="desc"><b>Lemon Tart 6 Pack</b></div>
-            <div class="desc"><b>$8.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro8.jpg">
-                <img src="images/pro8.jpg" alt="Large Traditional Christmas Cake">
-            </a>
-            <div class="desc"><b>Large Traditional Christmas Cake</b></div>
-            <div class="desc"><b>$10.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro9.jpg">
-                <img src="images/pro9.jpg" alt="Ham & Cheese Danish">
-            </a>
-            <div class="desc"><b>Ham & Cheese Danish</b></div>
-            <div class="desc"><b>$3.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro10.jpg">
-                <img src="images/pro10.jpg" alt="Croissant">
-            </a>
-            <div class="desc"><b>Croissant</b></div>
-            <div class="desc"><b>$3.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro11.jpg">
-                <img src="images/pro11.jpg" alt="Cheese & Bacon Roll">
-            </a>
-            <div class="desc"><b>Cheese & Bacon Roll</b></div>
-            <div class="desc"><b>$3.50</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro12.jpg">
-                <img src="images/pro12.jpg" alt="Italian Roll">
-            </a>
-            <div class="desc"><b>Italian Roll</b></div>
-            <div class="desc"><b>$4.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro13.jpg">
-                <img src="images/pro13.jpg" alt="Croissant 4 Pack">
-            </a>
-            <div class="desc"><b>Croissant 4 Pack</b></div>
-            <div class="desc"><b>$12.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro14.jpg">
-                <img src="images/pro14.jpg" alt="Savoury Bite 3 Pack">
-            </a>
-            <div class="desc"><b>Savoury Bite 3 Pack</b></div>
-            <div class="desc"><b>$9.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro15.jpg">
-                <img src="images/pro15.jpg" alt="Scones 6 Pack">
-            </a>
-            <div class="desc"><b>Scones 6 Pack</b></div>
-            <div class="desc"><b>$8.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pro16.jpg">
-                <img src="images/pro16.jpg" alt="Pizza 2 Pack">
-            </a>
-            <div class="desc"><b>Pizza 2 Pack</b></div>
-            <div class="desc"><b>$9.95</b></div>
-            <div class="desc"><button>BUY</button></div>
-        </div>
-
+            <img src="images/pro5.jpg" alt="Multigrain Bread">
+            <div class="desc"><b>Multigrain Bread</b></div>
+            <div class="desc"><b>$4.75</b></div>
+            <div class="desc"><button onclick="buyProduct(5, 4.75)">BUY</button></div>
+ <!-- Add other products with correct product_id and price -->
     </div>
+    <div class="gallery">
+            <img src="images/pro6.jpg" alt="Sourdough Bread">
+            <div class="desc"><b>Sourdough Bread</b></div>
+            <div class="desc"><b>$6.00</b></div>
+            <div class="desc"><button onclick="buyProduct(6, 6.00)">BUY</button></div>
+        </div>
+        <div class="gallery">
+            <img src="images/pro7.jpg" alt="Baguette">
+            <div class="desc"><b>Baguette</b></div>
+            <div class="desc"><b>$2.50</b></div>
+            <div class="desc"><button onclick="buyProduct(7, 2.50)">BUY</button></div>  
+        
+    </div>
+    <div class="gallery">
+            <img src="images/pro8.jpg" alt="Gluten-Free Bread">
+            <div class="desc"><b>Gluten-Free Bread</b></div>
+            <div class="desc"><b>$7.00</b></div>
+            <div class="desc"><button onclick="buyProduct(8, 7.00)">BUY</button></div>
+        </div>
+        <div class="gallery">
+            <img src="images/pro9.jpg" alt="Ciabatta Bread">
+            <div class="desc"><b>Ciabatta Bread</b></div>
+            <div class="desc"><b>$5.50</b></div>
+            <div class="desc"><button onclick="buyProduct(9, 5.50)">BUY</button></div>
+        </div>
+        <div class="gallery">   
+            <img src="images/pro10.jpg" alt="Focaccia Bread">
+            <div class="desc"><b>Focaccia Bread</b></div>
+            <div class="desc"><b>$6.50</b></div>
+            <div class="desc"><button onclick="buyProduct(10, 6.50)">BUY</button></div>
+        </div>
+        <div class="gallery">   
+            <img src="images/pro11.jpg" alt="Rye Bread">
+            <div class="desc"><b>Rye Bread</b></div>
+            <div class="desc"><b>$4.25</b></div>
+            <div class="desc"><button onclick="buyProduct(11, 4.25)">BUY</button></div>
+        </div>
+        <div class="gallery">
+            <img src="images/pro12.jpg" alt="Brioche">
+            <div class="desc"><b>Brioche</b></div>
+            <div class="desc"><b>$3.75</b></div>
+            <div class="desc"><button onclick="buyProduct(12, 3.75)">BUY</button></div>
+        </div>
+    </div>
+    
 
     <p><font color="black">Our aim is to provide you good service and quality products.</font></p>
+
+    <script>
+    function buyProduct(productId, price) {
+        let qty = prompt("Enter quantity:");
+        if (qty !== null && qty > 0) {
+            let form = document.createElement("form");
+            form.method = "POST";
+            form.action = "";
+
+            let idField = document.createElement("input");
+            idField.type = "hidden";
+            idField.name = "product_id";
+            idField.value = productId;
+            form.appendChild(idField);
+
+            let qtyField = document.createElement("input");
+            qtyField.type = "hidden";
+            qtyField.name = "quantity";
+            qtyField.value = qty;
+            form.appendChild(qtyField);
+
+            let priceField = document.createElement("input");
+            priceField.type = "hidden";
+            priceField.name = "price";
+            priceField.value = price;
+            form.appendChild(priceField);
+
+            document.body.appendChild(form);
+            form.submit();
+        } else {
+            alert("Please enter a valid quantity.");
+        }
+    }
+    </script>
 </body>
 </html>
