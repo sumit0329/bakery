@@ -13,6 +13,8 @@
         table { width: 80%; margin: 30px auto; border-collapse: collapse; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
         th { background-color: #007BFF; color: white; }
+        .error { color: red; }
+        .success { color: green; }
     </style>
 </head>
 <body>
@@ -20,6 +22,35 @@
 <h2>Users Management</h2>
 <a href="admin_dashboard.php">← Back to Dashboard</a>
 
+<?php
+$message = '';
+if (isset($_POST['add_user'])) {
+    $user_id = $_POST['user_id'];
+    $username = trim($_POST['username']);
+    $password = $_POST['password'];
+
+    $stmt = $conn->prepare("SELECT id FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $message = "<p class='error'>Username already exists!</p>";
+    } else {
+        $password_hashed = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users (id, username, password) VALUES (?, ?, ?)";
+        $insert_stmt = $conn->prepare($sql);
+        $insert_stmt->bind_param("iss", $user_id, $username, $password_hashed);
+        if ($insert_stmt->execute()) {
+            $message = "<p class='success'>User added successfully!</p>";
+        } else {
+            $message = "<p class='error'>Error: " . $conn->error . "</p>";
+        }
+        $insert_stmt->close();
+    }
+    $stmt->close();
+}
+if ($message) echo $message;
+?>
 
 <form method="POST" action="">
     <label>User ID:</label>
@@ -35,20 +66,6 @@
 </form>
 
 <?php
-if (isset($_POST['add_user'])) {
-    $user_id = $_POST['user_id'];
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
-    $sql = "INSERT INTO users (id, username, password) VALUES ('$user_id', '$username', '$password')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "<p style='color:green;'>User added successfully!</p>";
-    } else {
-        echo "<p style='color:red;'>Error: " . $conn->error . "</p>";
-    }
-}
-
-
 $result = $conn->query("SELECT id, username FROM users ORDER BY id ASC");
 if ($result->num_rows > 0) {
     echo "<table>
@@ -60,7 +77,6 @@ if ($result->num_rows > 0) {
         echo "<tr>
                 <td>{$row['id']}</td>
                 <td>{$row['username']}</td>
-                
               </tr>";
     }
     echo "</table>";
