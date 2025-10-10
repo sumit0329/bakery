@@ -5,15 +5,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
     $product_id = intval($_POST["product_id"]);
     $quantity = intval($_POST["quantity"]);
     $price = floatval($_POST["price"]);
-    $order_id = rand(1000, 9999); // Temporary order_id (replace with actual order system later)
+    $customer_id = 1; // Replace with actual logged-in user/customer id from session if available
+    $order_date = date('Y-m-d H:i:s');
+    $total = $quantity * $price;
 
-    // Insert into database
-    $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("iiid", $order_id, $product_id, $quantity, $price);
-    $stmt->execute();
+    // Insert into orders table with quantity
+    $stmt = $conn->prepare("INSERT INTO orders (customer_id, order_date, total, quantity) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("isdi", $customer_id, $order_date, $total, $quantity);
+    if ($stmt->execute()) {
+        echo "<script>alert('✅ Order placed successfully!');</script>";
+    } else {
+        echo "<script>alert('❌ Failed to place order.');</script>";
+    }
     $stmt->close();
-
-    echo "<script>alert('✅ Order placed successfully!');</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -171,17 +175,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
             <div class="desc"><b>Wholemeal Bread</b></div>
             <div class="desc"><b>$4.50</b></div>
             <div class="desc"><button onclick="buyProduct(4, 4.50)">BUY</button></div>
-            
-
         </div>  
         <div class="gallery">
             <img src="images/pro5.jpg" alt="Multigrain Bread">
             <div class="desc"><b>Multigrain Bread</b></div>
             <div class="desc"><b>$4.75</b></div>
             <div class="desc"><button onclick="buyProduct(5, 4.75)">BUY</button></div>
- <!-- Add other products with correct product_id and price -->
-    </div>
-    <div class="gallery">
+        </div>
+        <div class="gallery">
             <img src="images/pro6.jpg" alt="Sourdough Bread">
             <div class="desc"><b>Sourdough Bread</b></div>
             <div class="desc"><b>$6.00</b></div>
@@ -192,9 +193,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
             <div class="desc"><b>Baguette</b></div>
             <div class="desc"><b>$2.50</b></div>
             <div class="desc"><button onclick="buyProduct(7, 2.50)">BUY</button></div>  
-        
-    </div>
-    <div class="gallery">
+        </div>
+        <div class="gallery">
             <img src="images/pro8.jpg" alt="Gluten-Free Bread">
             <div class="desc"><b>Gluten-Free Bread</b></div>
             <div class="desc"><b>$7.00</b></div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 10, 2025 at 12:54 AM
+-- Generation Time: Oct 10, 2025 at 03:55 AM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -81,9 +81,18 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `customer_id` int NOT NULL,
   `order_date` datetime DEFAULT CURRENT_TIMESTAMP,
   `total` decimal(10,2) NOT NULL,
+  `quantity` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `customer_id`, `order_date`, `total`, `quantity`) VALUES
+(1, 1, '2025-10-10 03:51:59', 47.40, 0),
+(2, 1, '2025-10-10 03:53:53', 395.00, 0);
 
 -- --------------------------------------------------------
 
@@ -101,7 +110,14 @@ CREATE TABLE IF NOT EXISTS `order_items` (
   PRIMARY KEY (`id`),
   KEY `order_id` (`order_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `price`) VALUES
+(1, 7382, 1, 1, 5.95);
 
 -- --------------------------------------------------------
 
