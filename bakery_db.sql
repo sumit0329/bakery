@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 26, 2025 at 05:25 AM
+-- Generation Time: Oct 10, 2025 at 12:54 AM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -20,6 +20,38 @@ SET time_zone = "+00:00";
 --
 -- Database: `bakery_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attendance`
+--
+
+DROP TABLE IF EXISTS `attendance`;
+CREATE TABLE IF NOT EXISTS `attendance` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int DEFAULT NULL,
+  `clock_in` datetime DEFAULT NULL,
+  `clock_out` datetime DEFAULT NULL,
+  `hours_worked` decimal(6,2) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `attendance`
+--
+
+INSERT INTO `attendance` (`id`, `user_id`, `clock_in`, `clock_out`, `hours_worked`) VALUES
+(9, 122, '2025-10-08 22:46:43', NULL, NULL),
+(8, 123, '2025-10-08 22:45:58', NULL, NULL),
+(7, 123, '2025-10-08 22:43:46', NULL, NULL),
+(6, 123, '2025-10-08 22:43:36', NULL, NULL),
+(10, 123, '2025-10-08 22:52:37', '2025-10-08 23:11:45', 0.32),
+(11, 123, '2025-10-08 22:52:42', '2025-10-08 23:03:34', 0.17),
+(12, 4, '2025-10-08 23:13:16', '2025-10-08 23:13:20', 0.00),
+(13, 4, '2025-10-08 23:15:43', '2025-10-08 23:15:49', 0.00),
+(14, 2, '2025-10-09 00:35:38', '2025-10-09 00:35:44', 0.00);
 
 -- --------------------------------------------------------
 
@@ -100,7 +132,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'Admin', '$2y$10$5ydtHgzR7LzA1AvHybeBd.CTkkO/uMW2MJrIfgS/AM9ZNaSMrLomm'),
+(123, 'sumit', '$2y$10$OXD.trIzlaht5fOPPbcl6O3Zxg8n7uSzg8A3nGEbCFwctfcl07oLu'),
+(4, 'saugat', '$2y$10$B.DZsy4Sc.xWbeIHwmjhnuVba6OAEhGThheYeUr20bDj6FOX9WLCy'),
+(2, 'tshewang', '$2y$10$8V6RBF7cB3KNw4qWVXHpPOAkuUxcDtb7fSvfBgV1I7GMfEQZ60NPe'),
+(3, 'krijan', '$2y$10$m9HFoUnUUEIHUq477DBHmeTZjsxYKEO6kmFsjNXe4Y3zU0HorY6Bu');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
