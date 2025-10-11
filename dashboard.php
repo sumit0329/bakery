@@ -1,10 +1,10 @@
 <?php
-
+// filepath: c:\wamp64\www\Bakery_System\bakery\dashboard.php
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About Us | Twenty 8 Bakery</title>
+    <title>Home | Twenty 8 Bakery</title>
     <style>
         body {
             margin: 0;
@@ -44,6 +44,53 @@
         .nav a.active {
             background-color: #04AA6D;
             color: white;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .gallery {
+            border: 1px solid #ccc;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .gallery:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .desc {
+            padding: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .desc button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .desc button:hover {
+            background-color: #0056b3;
         }
 
         .about-section {
@@ -203,20 +250,41 @@
     </div>
 
     <div class="nav">
-        <a href="dashboard.php"class="active">Home</a>
+        <a href="dashboard.php" class="active">Home</a>
         <a href="view_product.php">Product</a>
         <a href="contactus.php">Contact Us</a>
         <a href="aboutus.php">About Us</a>
         <a href="login.php">Login</a>
     </div>
+    <h2>Our Products</h2>
 
+    <div class="product-container">
+        <div class="gallery">
+            <img src="images/pro1.jpg" alt="High Fibre White Loaf Bread">
+            <div class="desc"><b>High Fibre White Loaf Bread</b></div>
+            <div class="desc"><b>$5.95</b></div>
+            <div class="desc"><button onclick="window.location.href='view_product.php'">BUY</button></div>
+        </div>
+        <div class="gallery">
+            <img src="images/pro2.jpg" alt="White Block Loaf Bread">
+            <div class="desc"><b>White Block Loaf Bread</b></div>
+            <div class="desc"><b>$3.95</b></div>
+            <div class="desc"><button onclick="window.location.href='view_product.php'">BUY</button></div>
+        </div>
+        <div class="gallery">
+            <img src="images/pro3.jpg" alt="Round White Roll">
+            <div class="desc"><b>Round White Roll</b></div>
+            <div class="desc"><b>$1.95</b></div>
+            <div class="desc"><button onclick="window.location.href='view_product.php'">BUY</button></div>
+        </div>
+    </div>
     
     <div class="quote">
         “Life is what you bake it — and at Twenty 8 Bakery, we bake it with love and passion.”
     </div>
 
     <section class="address-section">
-        <h2>Visit Us</h2>
+        <h3>Visit Us</h3>
         <p><strong>Address:</strong> 28 Sweet Street, Sydney, NSW 2000, Australia</p>
         <p><strong>Opening Hours:</strong> Mon–Sat: 7:00 AM – 6:00 PM | Sun: 8:00 AM – 3:00 PM</p>
         <p><strong>Contact:</strong> (02) 9876 5432 | twenty8bakery@gmail.com</p>

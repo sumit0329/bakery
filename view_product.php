@@ -1,23 +1,26 @@
 <?php
-include "db.php"; // Make sure this file defines $mysqli
+include "db.php"; // Make sure this file defines $conn
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
     $product_id = intval($_POST["product_id"]);
     $quantity = intval($_POST["quantity"]);
     $price = floatval($_POST["price"]);
-    $customer_id = 1; // Replace with actual logged-in user/customer id from session if available
+    $customer_name = trim($_POST["customer_name"] ?? "");
+    $customer_id = intval($_POST["customer_id"] ?? 0); // Get customer_id from POST (or set to 0 if not provided)
     $order_date = date('Y-m-d H:i:s');
     $total = $quantity * $price;
 
-    // Insert into orders table with quantity
-    $stmt = $conn->prepare("INSERT INTO orders (customer_id, order_date, total, quantity) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("isdi", $customer_id, $order_date, $total, $quantity);
-    if ($stmt->execute()) {
-        echo "<script>alert('✅ Order placed successfully!');</script>";
+    if ($customer_name === "") {
+        echo "<script>alert('Please enter your name.');</script>";
     } else {
-        echo "<script>alert('❌ Failed to place order.');</script>";
+        // Insert into orders table (columns: id, customer_name, customer_id, order_date, total, quantity)
+        $stmt = $conn->prepare("INSERT INTO orders (customer_name, customer_id, order_date, total, quantity) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sdsdi", $customer_name, $customer_id, $order_date, $total, $quantity);
+        $stmt->execute();
+        $stmt->close();
+
+        echo "<script>alert('✅ Order placed successfully!');</script>";
     }
-    $stmt->close();
 }
 ?>
 <!DOCTYPE html>
@@ -229,34 +232,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
 
     <p><font color="black">Our aim is to provide you good service and quality products.</font></p>
 
+    <form id="buyForm" method="POST" style="display:none;">
+        <input type="hidden" name="product_id" id="form_product_id">
+        <input type="hidden" name="quantity" id="form_quantity">
+        <input type="hidden" name="price" id="form_price">
+        <input type="hidden" name="customer_name" id="form_customer_name">
+        <input type="hidden" name="customer_id" id="form_customer_id" value="0">
+    </form>
+
     <script>
     function buyProduct(productId, price) {
+        let customerName = prompt("Enter your name:");
+        if (!customerName || customerName.trim() === "") {
+            alert("Please enter your name.");
+            return;
+        }
         let qty = prompt("Enter quantity:");
-        if (qty !== null && qty > 0) {
-            let form = document.createElement("form");
-            form.method = "POST";
-            form.action = "";
-
-            let idField = document.createElement("input");
-            idField.type = "hidden";
-            idField.name = "product_id";
-            idField.value = productId;
-            form.appendChild(idField);
-
-            let qtyField = document.createElement("input");
-            qtyField.type = "hidden";
-            qtyField.name = "quantity";
-            qtyField.value = qty;
-            form.appendChild(qtyField);
-
-            let priceField = document.createElement("input");
-            priceField.type = "hidden";
-            priceField.name = "price";
-            priceField.value = price;
-            form.appendChild(priceField);
-
-            document.body.appendChild(form);
-            form.submit();
+        qty = parseInt(qty);
+        if (!isNaN(qty) && qty > 0) {
+            document.getElementById("form_product_id").value = productId;
+            document.getElementById("form_quantity").value = qty;
+            document.getElementById("form_price").value = price;
+            document.getElementById("form_customer_name").value = customerName.trim();
+            // If you have a logged-in user, set customer_id here
+            // document.getElementById("form_customer_id").value = USER_ID_FROM_SESSION;
+            document.getElementById("buyForm").submit();
         } else {
             alert("Please enter a valid quantity.");
         }
