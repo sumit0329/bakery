@@ -37,7 +37,7 @@
     <h2>Dashboard</h2>
 
     <div class="menu">
-        <a href="orders.php">Manage Orders</a>
+        <a href="manageorder.php">Manage Orders</a>
         <a href="users.php">Manage Users</a>
         <a href="attendance.php">Manage Attendance</a>
         <a href="login.php">logout</a>
