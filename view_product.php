@@ -59,10 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
             font-size: 18px;
         }
 
-        .nav a:hover {
-            background-color: #ddd;
+         .nav a:hover {
+            background-color: #03b300ff;
             color: black;
         }
+
+        
 
         .nav a.active {
             background-color: #04AA6D;

@@ -37,7 +37,7 @@
         }
 
         .nav a:hover {
-            background-color: #ddd;
+            background-color: #03b300ff;
             color: black;
         }
 
